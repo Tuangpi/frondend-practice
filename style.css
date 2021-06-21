@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+:root{
+    --main-color: hsl(233, 47%, 7%);
+    --card-color: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --head-color: hsl(0, 0%, 100%);
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+    --stat-color: hsla(0, 0%, 100%, 0.6);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--main-color);
+    font-size: 15px;
+    color: var(--paragraph-color);
+    font-family: Inter;
+    font-weight: 400;
+}
+.box{
+    width: 75vw;
+    height: auto;
+    margin: 100px auto;
+    background-color: var(--card-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.left{
+    margin: 80px 70px 0 65px;
+}
+h1{
+    color: var(--head-color);
+}
+strong{
+    color: var(--accent);
+}
+.des{
+    margin: 30px 0 90px 0;
+}
+.des-1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-bottom: 75px;
+}
+.thick{
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--head-color);
+}
+span{
+    font-family: Lexend Deca;
+    text-transform: uppercase;
+    color: var(--stat-color);
+}
+.header-img{
+    background-image: linear-gradient(hsla(277, 64%, 61%,0.5), hsla(277, 64%, 61%, 0.7)),url(image-header-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh;
+}
+@media all and (max-width: 375px) {
+    .box{
+        width: 90vw;
+        height: auto;
+        margin: 100px auto;
+        background-color: var(--card-color);
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .header-img{
+        border-top-right-radius: 7px;
+        border-top-left-radius: 7px;
+    }
+    .left{
+        margin: 50px 30px 0 20px;
+        text-align: center;
+    }
+    .des{
+        margin: 20px 0 54px 0;
+    }
+    .des-1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 30px;
+        text-align: center;
+    }
+    .attribution{
+        margin-bottom: 30px;
+    }
+}
